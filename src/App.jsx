@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Products from "./pages/Products";
 import UseState from "./pages/UseState";
+import UseEffectPage from "./pages/UseEffectPage";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
             <Button color="inherit" component={Link} to="/usestate">
               Use State
             </Button>
+            <Button color="inherit" component={Link} to="/useeffect">
+              Use Effect
+            </Button>
             <Button color="inherit" component={Link} to="/about">
               About
             </Button>
@@ -41,6 +45,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/usestate" element={<UseState />} />
+          <Route path="/useeffect" element={<UseEffectPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
