@@ -11,6 +11,8 @@ import GridPage from "./pages/GridPage";
 import PostDetails from "./pages/postDetails";
 import FormikForm from "./pages/FormikForm";
 import FormikFormAdvanced from "./pages/FormikFormAdvanced";
+import { AppProvider } from "./pages/AppContext";
+import UseContextPage from "./pages/ContextPage/UseContextPage";
 
 function App() {
   return (
@@ -43,6 +45,9 @@ function App() {
             <Button color="inherit" component={Link} to="/formikadvanced">
               Formik+
             </Button>
+            <Button color="inherit" component={Link} to="/context">
+              Use Context
+            </Button>
             <Button color="inherit" component={Link} to="/contact">
               Contact
             </Button>
@@ -58,19 +63,22 @@ function App() {
 
       {/* Page Routes */}
       <Box sx={{ p: 3 }}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/grid" element={<GridPage />} />
-          <Route path="/postdetails" element={<PostDetails />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/formik" element={<FormikForm />} />
-          <Route path="/formikadvanced" element={<FormikFormAdvanced />} />
-          <Route path="/usestate" element={<UseState />} />
-          <Route path="/useeffect" element={<UseEffectPage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/Practice" element={<Practice />} />
-        </Routes>
+        <AppProvider>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/grid" element={<GridPage />} />
+            <Route path="/postdetails" element={<PostDetails />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/formik" element={<FormikForm />} />
+            <Route path="/formikadvanced" element={<FormikFormAdvanced />} />
+            <Route path="/context" element={<UseContextPage />} />
+            <Route path="/usestate" element={<UseState />} />
+            <Route path="/useeffect" element={<UseEffectPage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/Practice" element={<Practice />} />
+          </Routes>
+        </AppProvider>
       </Box>
     </Router>
   );
