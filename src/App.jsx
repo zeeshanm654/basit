@@ -9,6 +9,8 @@ import UseEffectPage from "./pages/UseEffectPage";
 import Practice from "./pages/Paractice";
 import GridPage from "./pages/GridPage";
 import PostDetails from "./pages/postDetails";
+import FormikForm from "./pages/FormikForm";
+import FormikFormAdvanced from "./pages/FormikFormAdvanced";
 
 function App() {
   return (
@@ -35,10 +37,16 @@ function App() {
             <Button color="inherit" component={Link} to="/about">
               About
             </Button>
+            <Button color="inherit" component={Link} to="/formik">
+              Formik
+            </Button>
+            <Button color="inherit" component={Link} to="/formikadvanced">
+              Formik+
+            </Button>
             <Button color="inherit" component={Link} to="/contact">
               Contact
             </Button>
-             <Button color="inherit" component={Link} to="/grid">
+            <Button color="inherit" component={Link} to="/grid">
               Grid Example
             </Button>
             <Button color="inherit" component={Link} to="/Practice">
@@ -55,6 +63,8 @@ function App() {
           <Route path="/grid" element={<GridPage />} />
           <Route path="/postdetails" element={<PostDetails />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/formik" element={<FormikForm />} />
+          <Route path="/formikadvanced" element={<FormikFormAdvanced />} />
           <Route path="/usestate" element={<UseState />} />
           <Route path="/useeffect" element={<UseEffectPage />} />
           <Route path="/about" element={<About />} />
