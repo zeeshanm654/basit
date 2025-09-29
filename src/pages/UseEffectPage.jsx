@@ -9,7 +9,7 @@ export default function UseEffectPage() {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get("https://dummyjson.com/products");
+      const response = await axios.get("https://dummyjson.com/products/categories");
       console.log("response", response.data.products);
       setProducts(response.data.products);
     } catch (err) {

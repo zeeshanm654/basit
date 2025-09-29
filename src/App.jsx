@@ -6,6 +6,9 @@ import Contact from "./pages/Contact";
 import Products from "./pages/Products";
 import UseState from "./pages/UseState";
 import UseEffectPage from "./pages/UseEffectPage";
+import Practice from "./pages/Paractice";
+import GridPage from "./pages/GridPage";
+import PostDetails from "./pages/postDetails";
 
 function App() {
   return (
@@ -35,6 +38,12 @@ function App() {
             <Button color="inherit" component={Link} to="/contact">
               Contact
             </Button>
+             <Button color="inherit" component={Link} to="/grid">
+              Grid Example
+            </Button>
+            <Button color="inherit" component={Link} to="/Practice">
+              Practice
+            </Button>
           </Box>
         </Toolbar>
       </AppBar>
@@ -43,11 +52,14 @@ function App() {
       <Box sx={{ p: 3 }}>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/grid" element={<GridPage />} />
+          <Route path="/postdetails" element={<PostDetails />} />
           <Route path="/products" element={<Products />} />
           <Route path="/usestate" element={<UseState />} />
           <Route path="/useeffect" element={<UseEffectPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/Practice" element={<Practice />} />
         </Routes>
       </Box>
     </Router>
